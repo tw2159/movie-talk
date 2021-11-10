@@ -1,0 +1,97 @@
+/* --- Universal Styling ------------------------------ */
+h1 {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  margin: 0;
+}
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+}
+a {
+  color: #6c56ac;
+}
+a:hover {
+  color: #4c3c7a;
+  text-decoration: none;
+}
+a:active {
+  color: #372b58;
+}
+.button {
+  background-color: #6c56ac;
+  border-color: #6c56ac;
+  color: #fff;
+}
+.button:hover,
+.button:focus {
+  background-color: #4c3c7a;
+  border-color: #4c3c7a;
+  color: #fff;
+}
+.button a {
+  color: #fff;
+}
+.button a:hover {
+  text-decoration: none;
+}
+section {
+  margin: 0 0 20px 0;
+}
+.card {
+  margin: 0 0 20px 0;
+}
+
+/* --- Header ----------------------------------------- */
+header {
+  background: linear-gradient(90deg, rgba(153,137,197,1) 0%, rgba(108,86,172,1) 35%, rgba(76,60,122,1) 100%);
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  padding: 6px 20px;
+}
+.title-icon {
+  margin: 0 10px 0 0;
+}
+
+/* --- Navigation ------------------------------------- */
+nav {
+  align-items: center;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+nav a {
+  color: #fff;
+  margin: 0 0 0 26px;
+}
+nav a:hover {
+  color: #9989c5;
+  text-decoration: none;
+}
+nav a:active {
+  color: #8a78bd;
+}
+nav i {
+  margin: 0 6px 0 0;
+}
+
+/* --- Main ------------------------------------------- */
+main {
+  margin: 30px auto;
+  width: 80%;
+}
+
+/* --- Media Queries ---------------------------------- */
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 30px;
+    line-height: 50px;
+  }
+  nav span {
+    display: none;
+  }
+}
