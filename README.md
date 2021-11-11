@@ -4,10 +4,10 @@
 A social site where people can have rousing discussions about movies.  Built with a custom server-side API and a MySQL database.  Utilizes ORM, the MVC paradigm, Node, Express, MySQL Sequelize, and Handlebars.  Deployed through Heroku.
 
 ## Link
-The link here...
+https://movie-talk.herokuapp.com/
 
 ## Screenshot
-image of finished site here...
+![Screenshots](./screenshots/movietalk.png)
 
 ## Built With
 * HTML
@@ -25,4 +25,4 @@ image of finished site here...
 * Heroku
 
 ## Contribution
-Made with ❤️ by Te Wei
+Made with ❤️ by Te Wei, Joshua Ramat, Deleon Haley
