@@ -1,22 +1,8 @@
 {
   "name": "project-2",
   "version": "1.0.0",
-  "description": "## Purpose A social site where people can have rousing discussions about movies.  Built with a custom server-side API and a MySQL database.  Utilizes ORM, the MVC paradigm, Node, Express, MySQL Sequelize, and Handlebars.  Deployed through Heroku.",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/joshuaramat/project-2.git"
-  },
-  "author": "Joshua Ramat, Te Wei, Deleon Haley",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/joshuaramat/project-2/issues"
-  },
-  "homepage": "https://github.com/joshuaramat/project-2#readme",
+  "description": "## Purpose An application that uses an Express.js back-end that will save and retrieve notes data from a JSON file.",
+  "main": "index.js",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.2",
@@ -26,5 +12,19 @@
     "express-session": "^1.17.2",
     "mysql2": "^2.3.3-rc.0",
     "sequelize": "^6.9.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuaramat/project-2.git"
+  },
+  "author": "Te Wei, Joshua Ramat, Deleon Haley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshuaramat/project-2/issues"
+  },
+  "homepage": "https://github.com/joshuaramat/project-2#readme"
 }

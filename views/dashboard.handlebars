@@ -1,0 +1,10 @@
+{{#if posts.length}}
+<section>
+  <h2 class="header-page">Your Posts</h2>
+    {{#each posts as |post|}}
+      {{> dashboard-postinfo post}}
+    {{/each}}
+</section>
+{{/if}}
+
+<button type="submit" class="button btn"><a href="/dashboard/new">Create New Post</a></button>
