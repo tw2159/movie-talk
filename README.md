@@ -4,7 +4,7 @@
 A social site where people can have rousing discussions about movies.  Built with a custom server-side API and a MySQL database.  Utilizes ORM, the MVC paradigm, Node, Express, MySQL Sequelize, and Handlebars.  Deployed through Heroku.
 
 ## Link
-https://movie-talk.herokuapp.com/
+https://whispering-mountain-31913.herokuapp.com/post/1
 
 ## Screenshot
 ![Screenshots](./screenshots/movietalk.png)
