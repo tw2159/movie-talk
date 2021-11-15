@@ -8,8 +8,8 @@ router.get('/', (req, res) => {
   Post.findAll({
     attributes: [
       'id',
-      'title',
       'content',
+      'title',
       'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
@@ -31,7 +31,7 @@ router.get('/', (req, res) => {
       }
     ]
   })
-  .then(data => res.json(data.reverse()))
+  .then(data => res.json(data))
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
@@ -93,6 +93,26 @@ router.post('/', withAuth, (req, res) => {
   });
 });
 
+// Route to upvote
+router.put('/upvote', withAuth, (req, res) => {
+  if(req.session) {
+    Post.upvote(
+      {
+        ...req.body,
+        user_id: req.session.user_id
+      },
+      {
+        Comment, User, Vote
+      }
+    )
+    .then(data => res.json(data))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+  }
+});
+
 // Route to update a post
 router.put('/:id', withAuth, (req, res) => {
   Post.update(
@@ -117,26 +137,6 @@ router.put('/:id', withAuth, (req, res) => {
     console.log(err);
     res.status(500).json(err);
   });
-});
-
-// Route to upvote
-router.put('/upvote', withAuth, (req, res) => {
-  if(req.session) {
-    Post.upvote(
-      {
-        ...req.body,
-        user_id: req.session.user_id
-      },
-      {
-        Vote, Comment, User
-      }
-    )
-    .then(data => res.json(data))
-    .catch(err => {
-      console.log(err);
-      res.status(400).json(err);
-    });
-  }
 });
 
 // Route to delete a post

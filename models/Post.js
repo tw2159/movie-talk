@@ -12,7 +12,13 @@ class Post extends Model {
         where: {
           id: body.post_id
         },
-        attributes: ['id', 'content', 'title', 'created_at', [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']]
+        attributes: [
+          'id',
+          'content',
+          'title',
+          'created_at',
+          [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+        ]
       });
     });
   }
@@ -36,7 +42,6 @@ Post.init(
     },
     user_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       references: {
         model: 'user',
         key: 'id'
